@@ -1,0 +1,8 @@
+{
+  "include": ["./src/**/*"],
+  "compilerOptions": {
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "moduleResolution": "Node"
+  }
+}

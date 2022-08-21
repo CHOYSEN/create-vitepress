@@ -1,0 +1,61 @@
+{
+  "name": "create-vitepress",
+  "version": "0.0.3",
+  "main": "./dist/index.mjs",
+  "description": "Scaffolding Your Vitepress project.",
+  "bin": {
+    "create-vitepress": "./dist/index.mjs"
+  },
+  "scripts": {
+    "build": "unbuild",
+    "format": "prettier --ignore-unknown --ignore-path .gitignore --write ."
+  },
+  "keywords": [
+    "create-vitepress",
+    "vitepress",
+    "vite"
+  ],
+  "author": "CHOYSEN@qq.com",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist",
+    "templates"
+  ],
+  "bugs": "https://github.com/CHOYSEN/create-vitepress/issues",
+  "homepage": "https://github.com/CHOYSEN/create-vitepress#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CHOYSEN/create-vitepress.git"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@types/minimist": "^1.2.2",
+    "@types/prompts": "^2.0.14",
+    "lint-staged": "^13.0.3",
+    "minimist": "^1.2.6",
+    "picocolors": "^1.0.0",
+    "prettier": "^2.7.1",
+    "prompts": "^2.4.2",
+    "simple-git-hooks": "^2.8.0",
+    "unbuild": "^0.8.9"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "commit-msg": "npx commitlint --edit"
+  },
+  "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
