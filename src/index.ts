@@ -1,6 +1,6 @@
 #!/usr/bin/env node
+import mri from 'mri'
 import prompts from 'prompts'
-import minimist from 'minimist'
 import { bold, green } from 'picocolors'
 import { join, relative } from 'node:path'
 import { readdirSync, existsSync } from 'node:fs'
@@ -21,7 +21,7 @@ import { RENAME_FILES, INITIAL_PROJECT_NAME } from './consts'
 // avoids autoconversion to number of the project name by defining that the args
 // non associated with an option ( _ ) needs to be parsed as a string
 // see https://github.com/vitejs/vite/pull/4606
-const argv = minimist(process.argv.slice(2), { string: ['_'] })
+const argv = mri(process.argv.slice(2), { string: ['_'] })
 
 !(async () => {
   let projectName = formatProjectName(argv._[0])
