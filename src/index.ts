@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import mri from 'mri'
 import prompts from 'prompts'
-import { bold, green } from 'picocolors'
+import picocolors from 'picocolors'
 import { join, relative } from 'node:path'
 import { readdirSync, existsSync } from 'node:fs'
 import {
@@ -71,12 +71,12 @@ const argv = mri(process.argv.slice(2), { string: ['_'] })
     copy(srcPath, destPath)
   }
 
-  console.log(green('Done. Now run:\n'))
+  console.log(picocolors.green('Done. Now run:\n'))
   if (projectPath !== cwd) {
-    console.log(bold(`  cd ${relative(cwd, projectPath)}`))
+    console.log(picocolors.bold(`  cd ${relative(cwd, projectPath)}`))
   }
 
   const packageManager = getPackageManager()
-  console.log(bold(`  ${packageManager} install`))
-  console.log(bold(`  ${packageManager} run dev\n`))
+  console.log(picocolors.bold(`  ${packageManager} install`))
+  console.log(picocolors.bold(`  ${packageManager} run dev\n`))
 })()

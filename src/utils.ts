@@ -1,4 +1,4 @@
-import { red } from 'picocolors'
+import picocolors from 'picocolors'
 import { fileURLToPath } from 'node:url'
 import { resolve, dirname } from 'node:path'
 import {
@@ -18,7 +18,7 @@ export const resolveTemplateDir = (name = TEMPLATES.BASIC) => {
 }
 
 export const logError = (message: string) => {
-  console.log(red(`× ${message}`))
+  console.log(picocolors.red(`× ${message}`))
 }
 
 export const isDirectory = (path: string) => {
