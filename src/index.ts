@@ -44,7 +44,7 @@ const argv = mri(process.argv.slice(2), { string: ['_'] })
   const projectPath = resolveProjectPath(projectName)
 
   if (existsSync(projectPath) && !isDirectory(projectPath)) {
-    logError(`Path \`${projectPath}\` is already exists a file`)
+    logError(`Path "${projectPath}" is already exists a file`)
     return
   }
 
@@ -52,7 +52,11 @@ const argv = mri(process.argv.slice(2), { string: ['_'] })
     const { overwrite } = await prompts({
       type: 'confirm',
       name: 'overwrite',
-      message: `Target directory "${projectPath}" is not empty. Remove existing files and continue?`
+      message:
+        (projectName === '.'
+          ? 'Current directory'
+          : `Target directory "${projectPath}"`) +
+        ` is not empty. Remove existing files and continue?`
     })
     if (!overwrite) {
       logError('Operation cancelled')
