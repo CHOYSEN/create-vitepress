@@ -7,6 +7,7 @@
     "create-vitepress": "./dist/index.mjs"
   },
   "scripts": {
+    "test": "vitest run",
     "build": "unbuild",
     "format": "prettier --ignore-unknown --ignore-path .gitignore --write ."
   },
@@ -32,13 +33,16 @@
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
     "@types/prompts": "^2.0.14",
+    "execa": "^6.1.0",
     "lint-staged": "^13.0.3",
     "mri": "^1.2.0",
     "picocolors": "^1.0.0",
     "prettier": "^2.7.1",
     "prompts": "^2.4.2",
     "simple-git-hooks": "^2.8.0",
-    "unbuild": "^0.8.9"
+    "tsx": "^3.9.0",
+    "unbuild": "^0.8.9",
+    "vitest": "^0.22.1"
   },
   "prettier": {
     "semi": false,
