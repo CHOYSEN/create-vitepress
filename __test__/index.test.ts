@@ -52,3 +52,8 @@ it('should scaffold a project successfully', () => {
   expect(stdout).toContain(`Scaffolding project in ${TEST_PROJECT_PATH}...`)
   expect(generatedFiles).toEqual(templateFiles)
 })
+
+it('should mkdir recursively when input a deep directory', () => {
+  const { stdout } = run([`${TEST_PROJECT_NAME}/temp`])
+  expect(stdout).toContain(`Scaffolding project in`)
+})

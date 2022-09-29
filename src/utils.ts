@@ -41,7 +41,7 @@ export const isDirAvailable = (path: string) => {
 
 export const ensureDirAvailable = (path: string) => {
   if (!existsSync(path)) {
-    mkdirSync(path)
+    mkdirSync(path, { recursive: true })
     return
   }
   for (const file of readdirSync(path)) {
