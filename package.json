@@ -42,7 +42,7 @@
     "simple-git-hooks": "2.8.0",
     "tsx": "3.9.0",
     "unbuild": "0.8.9",
-    "vitest": "0.22.1"
+    "vitest": "0.24.3"
   },
   "prettier": {
     "semi": false,
