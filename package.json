@@ -39,7 +39,7 @@
     "picocolors": "1.0.0",
     "prettier": "2.7.1",
     "prompts": "2.4.2",
-    "simple-git-hooks": "2.8.0",
+    "simple-git-hooks": "2.8.1",
     "tsx": "3.9.0",
     "unbuild": "0.8.9",
     "vitest": "0.22.1"
