@@ -1,6 +1,6 @@
 {
   "name": "create-vitepress",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "./dist/index.mjs",
   "description": "Scaffolding Your Vitepress project.",
   "bin": {
@@ -30,19 +30,19 @@
     "url": "https://github.com/CHOYSEN/create-vitepress.git"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.1.2",
-    "@commitlint/config-conventional": "17.1.0",
-    "@types/prompts": "2.0.14",
+    "@commitlint/cli": "17.2.0",
+    "@commitlint/config-conventional": "17.2.0",
+    "@types/prompts": "2.4.1",
     "execa": "6.1.0",
     "lint-staged": "13.0.3",
     "mri": "1.2.0",
     "picocolors": "1.0.0",
     "prettier": "2.7.1",
     "prompts": "2.4.2",
-    "simple-git-hooks": "2.8.0",
-    "tsx": "3.9.0",
-    "unbuild": "0.8.9",
-    "vitest": "0.22.1"
+    "simple-git-hooks": "2.8.1",
+    "tsx": "3.12.0",
+    "unbuild": "0.9.4",
+    "vitest": "0.25.1"
   },
   "prettier": {
     "semi": false,
