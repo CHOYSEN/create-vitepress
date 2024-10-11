@@ -8,7 +8,7 @@
     "serve": "vitepress serve docs"
   },
   "devDependencies": {
-    "vue": "3.2.44",
+    "vue": "3.5.12",
     "vitepress": "1.0.0-alpha.28"
   },
   "pnpm": {
